@@ -1,4 +1,4 @@
-import { adventurePasses } from "@/app/dashboard/page";
+import { adventurePasses } from "@/app/dashboard/adventure-pass/data";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { generateQRCodeDataUrl } from "@/lib/generateQRCode";
@@ -27,6 +27,14 @@ export default async function PassDetailPage({ params }: PassPageProps) {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-10 space-y-6 text-black dark:text-white">
+      <div className="pt-6">
+        <Link
+          href="/dashboard"
+          className="text-sm text-orange-600 dark:text-orange-400 hover:underline"
+        >
+          ← Back to Dashboard
+        </Link>
+      </div>
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">{pass.title}</h1>
         <Badge className={`${statusBadge[pass.status].color} text-white`}>
@@ -39,7 +47,7 @@ export default async function PassDetailPage({ params }: PassPageProps) {
       <div className="text-sm space-y-1 text-gray-700 dark:text-neutral-300">
         <div className="flex items-center gap-2">
           <IconCalendar className="w-4 h-4" />
-          created at: <span className="font-medium">{pass.createdAt}</span>
+          created at: <span className="font-medium">{pass.travelDate}</span>
         </div>
         <div className="flex items-center gap-2">
           <IconPlaneTilt className="w-4 h-4" />
@@ -76,14 +84,7 @@ export default async function PassDetailPage({ params }: PassPageProps) {
       </div>
 
       {/* Back Button */}
-      <div className="pt-6">
-        <Link
-          href="/dashboard"
-          className="text-sm text-orange-600 dark:text-orange-400 hover:underline"
-        >
-          ← Back to Dashboard
-        </Link>
-      </div>
+      
     </div>
   );
 }

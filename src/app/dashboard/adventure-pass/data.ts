@@ -1,8 +1,6 @@
-"use client";
+// data/adventurePasses.ts
 
-import { AdventurePassCard } from "@/components/pass-cards";
-
-interface AdventurePass {
+export interface AdventurePass {
   id: string;
   title: string;
   description: string;
@@ -39,24 +37,3 @@ export const adventurePasses: AdventurePass[] = [
     ],
   },
 ];
-
-export default function AdventurePassesPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold text-white mb-6">Adventure Passes</h1>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {adventurePasses.map((pass) => (
-          <AdventurePassCard
-            key={pass.id}
-            title={pass.title}
-            description={pass.description}
-            travelDate={pass.travelDate}
-            passCode={pass.passCode}
-            status={pass.status}
-            id={pass.id}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}

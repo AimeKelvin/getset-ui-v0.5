@@ -7,7 +7,7 @@ import { generateQRCodeDataUrl } from "@/lib/generateQRCode";
 
 interface AdventurePassCardProps {
   title: string;
-  createdAt: string;
+  travelDate: string;
   passCode: string;
   status: "confirmed" | "pending" | "cancelled";
   id: string; // Added id prop
@@ -15,9 +15,10 @@ interface AdventurePassCardProps {
 
 export function AdventurePassCard({
   title,
-  createdAt,
+  travelDate,
   passCode,
   status,
+  id,
 }: AdventurePassCardProps) {
   const [qrUrl, setQrUrl] = useState<string | null>(null);
 
@@ -41,7 +42,7 @@ export function AdventurePassCard({
 
   return (
     <div className="w-full flex justify-center px-4 py-6">
-<Link href={`/adventure-pass/${id}`} className="block">
+<Link href={`/dashboard/adventure-pass/${id}`} className="block">
       <Card className="bg-white dark:bg-black text-black dark:text-white w-full max-w-4xl flex flex-col md:flex-row p-6 items-center relative">
         {/* LEFT SECTION */}
         <div className="flex-1 space-y-4">
@@ -50,7 +51,7 @@ export function AdventurePassCard({
           </div>
           <div className="space-y-1 text-sm">
             <p className='dark:text-gray-300 text-gray-600'>
-              <span className="font-medium"> created:</span> {createdAt}
+              <span className="font-medium"> created:</span> {travelDate}
             </p>
            
             <p className="text-gray-500 dark:text-gray-500  text-sm pt-2">
