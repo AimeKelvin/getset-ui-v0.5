@@ -15,8 +15,8 @@ export function Features() {
                         <CardHeader className="pb-3">
                             <CardHeading
                                 icon={MapIcon}
-                                title="Real time location tracking"
-                                description="Advanced tracking system, Instantly locate all your assets."
+                                title="Step-by-Step Trip Builder"
+                                description="Plan your entire trip with a simple, guided flow from transport to activities."
                             />
                         </CardHeader>
 
@@ -39,7 +39,32 @@ export function Features() {
                             <CardHeading
                                 icon={Calendar}
                                 title="Advanced Scheduling"
-                                description="Scheduling system, Instantly locate all your assets."
+                                description="Never miss a moment with intelligent trip scheduling and automatic alerts."
+                            />
+                        </CardHeader>
+
+                        <CardContent>
+                            <div className="relative mb-6 sm:mb-0">
+                                <div className="absolute -inset-6 [background:radial-gradient(50%_50%_at_75%_50%,transparent,hsl(var(--background))_100%)]"></div>
+                                <div className="aspect-[76/59] border">
+                                    <DualModeImage
+                                        darkSrc="https://tailark.com/_next/image?url=%2Forigin-cal-dark.png&w=3840&q=75"
+                                        lightSrc="https://tailark.com/_next/image?url=%2Forigin-cal.png&w=3840&q=75"
+                                        alt="calendar illustration"
+                                        width={1207}
+                                        height={929}
+                                    />
+                                </div>
+                            </div>
+                        </CardContent>
+                    </FeatureCard>
+                    
+                    <FeatureCard>
+                        <CardHeader className="pb-3">
+                            <CardHeading
+                                icon={Calendar}
+                                title="Centralized Travel Dashboard"
+                                description="View and manage all your trips, past and upcoming, in one personal space."
                             />
                         </CardHeader>
 
@@ -59,32 +84,32 @@ export function Features() {
                         </CardContent>
                     </FeatureCard>
 
-                    <FeatureCard className="p-6 lg:col-span-2">
-                        <p className="mx-auto my-6 max-w-md text-balance text-center text-2xl font-semibold">Smart scheduling with automated reminders for maintenance.</p>
-
-                        <div className="flex justify-center gap-6 overflow-hidden">
-                            <CircularUI
-                                label="Inclusion"
-                                circles={[{ pattern: 'border' }, { pattern: 'border' }]}
+                    <FeatureCard>
+                        <CardHeader className="pb-3">
+                            <CardHeading
+                                icon={Calendar}
+                                title="Adventure Pass with QR Code"
+                                description="Get a digital pass that grants access to all your booked services with one scan."
                             />
+                        </CardHeader>
 
-                            <CircularUI
-                                label="Inclusion"
-                                circles={[{ pattern: 'none' }, { pattern: 'primary' }]}
-                            />
-
-                            <CircularUI
-                                label="Join"
-                                circles={[{ pattern: 'blue' }, { pattern: 'none' }]}
-                            />
-
-                            <CircularUI
-                                label="Exclusion"
-                                circles={[{ pattern: 'primary' }, { pattern: 'none' }]}
-                                className="hidden sm:block"
-                            />
-                        </div>
+                        <CardContent>
+                            <div className="relative mb-6 sm:mb-0">
+                                <div className="absolute -inset-6 [background:radial-gradient(50%_50%_at_75%_50%,transparent,hsl(var(--background))_100%)]"></div>
+                                <div className="aspect-[76/59] border">
+                                    <DualModeImage
+                                        darkSrc="https://tailark.com/_next/image?url=%2Forigin-cal-dark.png&w=3840&q=75"
+                                        lightSrc="https://tailark.com/_next/image?url=%2Forigin-cal.png&w=3840&q=75"
+                                        alt="calendar illustration"
+                                        width={1207}
+                                        height={929}
+                                    />
+                                </div>
+                            </div>
+                        </CardContent>
                     </FeatureCard>
+
+                    
                 </div>
             </div>
         </section>
