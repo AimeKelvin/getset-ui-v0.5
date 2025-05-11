@@ -2,6 +2,8 @@
 import * as React from "react"
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { Features } from "@/components/blocks/features-10"
+
 
 export const HeroSection = () => {
     return (
@@ -53,6 +55,8 @@ export const HeroSection = () => {
                     </div>
                 </div>
             </section>
+
+            <Features/>
 
             <section className="bg-background relative z-10 py-16">
                 <div className="m-auto max-w-5xl px-6">
