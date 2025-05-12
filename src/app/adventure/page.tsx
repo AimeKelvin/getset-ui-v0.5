@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { format } from 'date-fns';
-imo
+import { Navbar } from '@/components/layout/Navbar';
 import { CalendarIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
@@ -41,10 +41,13 @@ export default function PlanPage() {
   };
 
   return (
-    <div className="min-h-screen bg-blue-50 flex items-center justify-center px-4 py-10">
+    <>
+    <Navbar/>
+    <div className="min-h-screen bg-blue-50 flex items-center justify-center px-4 py-18">
+      
       <Card className="w-full max-w-3xl border-blue-200 shadow-xl rounded-2xl">
         <CardHeader>
-          <CardTitle className="text-3xl font-bold text-blue-600">Plan Your Adventure</CardTitle>
+          <CardTitle className="text-lg font-bold text-black dark:text-white">Plan Your Adventure</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -142,12 +145,13 @@ export default function PlanPage() {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" size="lg" className="w-full bg-blue-500 hover:bg-blue-600">
+            <Button type="submit" size="lg" className="w-full bg-blue-800 hover:bg-blue-600">
               Continue
             </Button>
           </form>
         </CardContent>
       </Card>
     </div>
+     </>
   );
 }
