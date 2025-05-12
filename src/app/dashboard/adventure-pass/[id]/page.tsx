@@ -26,8 +26,8 @@ export default async function PassDetailPage({ params }: PassPageProps) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10 space-y-6 text-black dark:text-white">
-      <div className="pt-6">
+    <div className="max-w-4xl mx-auto px-6 space-y-6 text-black dark:text-white">
+      <div className="pt-1">
         <Link
           href="/dashboard"
           className="text-sm text-orange-600 dark:text-orange-400 hover:underline"
@@ -37,9 +37,11 @@ export default async function PassDetailPage({ params }: PassPageProps) {
       </div>
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">{pass.title}</h1>
+       {/*
         <Badge className={`${statusBadge[pass.status].color} text-white`}>
           {statusBadge[pass.status].text}
         </Badge>
+       */}
       </div>
 
       <p className="text-muted-foreground dark:text-neutral-400">{pass.description}</p>
